@@ -1,9 +1,11 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
+//import ReactDOM from 'react-dom'
+import ReactDOMServer from 'react-dom/server'
+//import './index.css'
 
+/*
 function Square(props) {
-  return(
+  return (
     <button className="square" onClick={ props.onClick }>
       { props.value }
     </button>
@@ -140,11 +142,19 @@ function calculateWinner(squares) {
     }
   }
   return null
+}*/
+
+class Game extends React.Component {
+  render () {
+    return (<div>Hello</div>)
+  }
 }
 
 // ========================================
 
-ReactDOM.render(
-  <Game />,
-  document.getElementById('root')
-)
+
+ReactDOMServer.renderToString(<Game />)
+//ReactDOM.hydrate(
+//  <Game />,
+//  document.getElementById('root')
+//)
